@@ -11,7 +11,16 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean(name="Admin")
 public class CompanyAdministrator extends User{
     private ArrayList adminList;
-    
+    /**
+     * a constructor for a CompanyAdministrator
+     * @param personalID
+     * @param forename
+     * @param surname
+     * @param address
+     * @param password
+     * @param username
+     * @param email 
+     */
     public CompanyAdministrator(String personalID, String forename, String surname, String address, String password, String username, String email){
         this.personalID = personalID;
         this.forename = forename;
@@ -93,7 +102,15 @@ public class CompanyAdministrator extends User{
     public void createAccount(){
         
     }
-
+/**
+ * implementing the updateForecast method in the CompanyAdministrator Class
+ * @param location
+ * @param temp
+ * @param humidity
+ * @param pressure
+ * @param windSpeed
+ * @param feelsTemp 
+ */
     @Override
     public void updateForecast(String location, int temp, int humidity, int pressure, int windSpeed, int feelsTemp) {
         

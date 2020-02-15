@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Forecast implements Subject {
+    /**
+     * the main attributes for the forecast class
+     */
     public ArrayList forecastObservers;
     public String location;
     public int temp;
@@ -22,6 +25,10 @@ public class Forecast implements Subject {
     public int windSpeed;
     public int feelsTemp;
 
+    /**
+     * Getters and setters
+     * @return 
+     */
     public String getLocation() {
         return location;
     }
@@ -71,7 +78,10 @@ public class Forecast implements Subject {
     }
 
     
-    
+    /**
+     * methods for adding, removing and notifying observers
+     * @param o 
+     */
     @Override
     public void addObserver(Observer o){
         forecastObservers.add(o);

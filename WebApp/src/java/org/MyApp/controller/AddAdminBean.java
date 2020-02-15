@@ -28,7 +28,9 @@ public class AddAdminBean {
     private String email; 
     private CompanyAdministrator admin = new CompanyAdministrator();
     private ArrayList<CompanyAdministrator> adminList;
-    
+    /**
+     * creates an admin
+     */
     @PostConstruct
     public void begin(){
         adminList = new ArrayList<>();
@@ -44,7 +46,9 @@ public class AddAdminBean {
     }
     
     public AddAdminBean(){}
-    
+    /**
+     * method to add another admin
+     */
     public void addAdmin(){
         admin = new CompanyAdministrator();
         admin = new CompanyAdministrator(this.personalID, this.forename, this.surname, this.address, this.password, this.username, this.email);
@@ -60,8 +64,10 @@ public class AddAdminBean {
     public void resetAdmin(){
         admin = new CompanyAdministrator();
     }
-    
-    //Getters and Setters
+    /**
+     * getters and setters
+     * @return 
+     */
         public String getPersonalID() {
         return personalID;
     }

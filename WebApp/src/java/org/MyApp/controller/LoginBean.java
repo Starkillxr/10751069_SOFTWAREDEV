@@ -32,9 +32,11 @@ public class LoginBean {
         this.password = password;
     }
  
-    //Validate User Method, takes entered input and checks against a preset 
-    //acceptable username and password. Dependent on whether this is correct 
-    //or not the user will be taken to the success or failure page.
+    /**
+     * a method to validate the user login and depending on if the login is valid it will 
+     * take the user to a specific main page
+     * @return 
+     */
     public String validateUserLogin() {
         String navResult = "";
         System.out.println("Entered Username is= " + username + ", password is= " + password);

@@ -12,7 +12,9 @@ package org.MyApp.model;
 import java.util.ArrayList;
 
 public class defaultUser extends User {
-
+/**
+ * defaultUser attributes
+ */
 private ArrayList userList;
 private ArrayList locationsList;
 public Subject location;
@@ -23,6 +25,17 @@ public String address;
 public String password;
 public String username;
 public String email;
+
+/**
+ * Constructor for a defaultUser
+ * @param personalID
+ * @param forename
+ * @param surname
+ * @param address
+ * @param password
+ * @param username
+ * @param email 
+ */
 
     public defaultUser(String personalID, String forename, String surname, String address, String password, String username, String email) {
         this.personalID = personalID;
@@ -115,12 +128,16 @@ public String email;
     public void addForecast(Subject Forecast){
         Forecast.addObserver(this);
     }
-     
+    /**
+     * a method to create a user
+     */
     public void createUser(){
         defaultUser userOne = new defaultUser();
         userOne.printUserDetails();
     }
-    
+    /**
+     * a method to print user details
+     */
     public void printUserDetails(){
         System.out.println("Your email is: " + email);
         System.out.println("Your name is: " + forename + " " + surname);

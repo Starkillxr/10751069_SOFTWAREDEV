@@ -30,7 +30,9 @@ public class addDefaultUser {
     private String email; 
     private defaultUser user = new defaultUser();
     private ArrayList<defaultUser> userList;
-    
+    /**
+     * creates a user
+     */
     @PostConstruct
     public void begin(){
         userList = new ArrayList<>();
@@ -49,7 +51,9 @@ public class addDefaultUser {
     }
     
     public addDefaultUser(){}
-    // method to add a user
+    /**
+     * method to add a user
+     */
     public void addUser(){
         user = new defaultUser();
         user = new defaultUser(this.personalID, this.forename, this.surname, this.address, this.password, this.username, this.email);
@@ -65,7 +69,10 @@ public class addDefaultUser {
     public void resetUser(){
         user = new defaultUser();
     }
-    // Getters and setters
+    /**
+     * getters and setters
+     * @return 
+     */
     public String getPersonalID() {
         return personalID;
     }
