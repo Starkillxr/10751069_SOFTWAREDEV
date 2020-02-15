@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+  <title>My App</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+* 
+/*Maintains content when resizing page*/
+{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #2B2D42;
+}
+/*Dictates the design of the links*/
+a:link {
+  color: #c3effc;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: CadetBlue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: DarkSlateGrey;
+  background-color: white;
+  text-decoration: none;
+}
+
+/* Style the header */
+header {
+  background-color: #c3effc;
+  padding: 20px;
+  text-align: center;
+  font-size: 50px;
+  color: #4c0200;
+  outline: 1px solid darkgray;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  text-align: center;
+  width: 20%;
+  height: auto;
+  background: #2B2D42;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #cccccc;
+  height: auto;
+  position: relative;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #c3effc;
+  padding: 10px;
+  text-align: center;
+  color: #4c0200;
+  outline: 1px solid darkgray;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.books {
+      background-color: #8d99ae;
+      color: black;
+      margin: 20px;
+      padding: 20px;
+      height: 225px;
+  }
+
+  .img {
+      float:right;
+  }
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+    <header>
+        <img align="left"  src="resources/images/logoS.jpg" alt="Logo" width="65" height="65" />
+        <h1> My App </h1> 
+        <!--<button type="button" class="btn btn-secondary">
+        Notifications <span class="badge badge-dark">4</span>
+        </button>-->
+    </header>
+<section>
+  <nav>
+      
+        <br></br>
+    <ul>
+      <li><a href="faces/main.xhtml">HOME</a></li>
+      <br></br>
+      <li><a href="faces/details.xhtml">CHANGE DETAILS</a></li>
+      <br></br>
+      <li><a href="faces/payments.xhtml">VIEW PAYMENTS</a></li>
+      <br></br>
+      <li><a href="faces/meetings.xhtml">VIEW MEETINGS</a></li>
+      <br></br>
+    </ul>
+  </nav>
+    <article>
+    <h1>Our Books</h1>
+    
+    <div class="books">
+        <div class="img">
+            <img src="resources/images/books/JATGP.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>JAMES AND THE GIANT PEACH</h4>
+        <i> by Roald Dahl</i>
+        <p>James Henry Trotter lives with his two horrid aunts, Spiker and Sponge. 
+            He hasn't got a single friend in the whole wide world. 
+            That is not, until he meets the Old Green Grasshopper and the rest 
+            of the insects aboard a giant, magical peach!</p>
+
+    </div>
+    <div class="books">
+        <div class="img">
+            <img src="resources/images/books/Twits.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>THE TWITS</h4>
+        <i> by Roald Dahl</i>
+        <p>Mr Twit hates his wife. Mrs Twit detests her husband. 
+            They like nothing more than playing wicked tricks on one another. 
+            Sooner or later, things are going to go too far...</p>
+
+    </div>
+    <div class="books">
+        <div class="img">
+            <img src="resources/images/books/GeorgesMarvMedicine.JPG" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>GEORGE'S MARVELLOUS MEDICINE</h4>
+        <i> by Roald Dahl</i>
+        <p>George's nasty old grandma needs teaching a lesson, and he decides 
+            the best remedy is a special home-made medicine...</p>
+
+    </div>
+    <div class="books">
+        <div class="img">
+            <img src="resources/images/books/EsioTrot.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>ESIO TROT</h4>
+        <i> by Roald Dahl</i>
+        <p>Esio Trot is a story about shy Mr Hoppy and his love for his 
+            neighbour, Mrs Silver.</p>
+
+    </div>
+    <div class="books">
+        <div class="img">
+            <img src="resources/images/books/jamaicaInn.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>Jamaica Inn</h4>
+        <i> by Daphne Du Maurier</i>
+        <p>The coachman tried to warn her away from the ruined, forbidding 
+            place on the rainswept Cornish coast. But young Mary Yellan 
+            chose instead to honor her mother's dying request that she join 
+            her frightened Aunt Patience and huge, hulking Uncle Joss Merlyn 
+            at Jamaica Inn. From her first glimpse on that raw November eve,
+            she could sense the inn's dark power. But never did Mary dream 
+            what the Inn would hold in store for her.</p>
+    </div>
+    <div class="books">
+        <div class="img">
+            <img src="resources/images/books/Rebecca.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>REBECCA</h4>
+        <i> by Daphne Du Maurier</i>
+        <p>Mrs De Winter learns the curiosities of both her new
+            husband and her new home, Manderley. But she might be in
+            for more than she expected when the past comes back to life.</p>
+    </div>
+    <div class="books">
+        <div class="img">
+            <img src="resources/images/books/Rebecca.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>MY COUSIN RACHEL</h4>
+        <i> by Daphne Du Maurier</i>
+        <p>Orphaned at an early age, Philip Ashley is raised by his 
+            benevolent older cousin, Ambrose. Resolutely single, Ambrose 
+            delights in Philip as his heir, a man who will love his grand 
+            home as much as he does himself. But the cosy world the two 
+            construct is shattered when Ambrose sets off on a trip to 
+            Florence.</p>
+    </div>
+    <div class="books">
+        <div class="img">
+            <img src="resources/images/books/theFranklinsTale.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>THE FRANKLIN'S TALE</h4>
+        <i> by Geoffrey Chaucer</i>
+        <p>As Dorigen and Arveragus' relationship reveals, a couple's 
+            preoccupation with fulfilling the ritualistic practices appropriate 
+            to courtly love renders the possibility of genuine love impossible.</p>
+    </div>
+        <div class="books">
+        <div class="img">
+            <img src="resources/images/books/theMillersTale.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>THE MILLER'S TALE</h4>
+        <i> by Geoffrey Chaucer</i>
+        <p>The story of a carpenter, his lovely wife, and two clerks who are 
+            particularly enamoured with her. The carpenter, John, lives in 
+            Oxford with his much younger wife, Alisoun, who is a local beauty. 
+            To make extra money, John rents out a room in his house, will he
+            live to regret this decision.</p>
+    </div>
+        <div class="books">
+        <div class="img">
+            <img src="resources/images/books/theWifeofBath.jpg" alt="BookCover" width="110" height="170"/>
+        </div>
+        <h4>THE WIFE OF BATH</h4>
+        <i> by Geoffrey Chaucer</i>
+        <p>The Wife of Bath is a self proclaimed rebel, see how she navigates 
+            the world by making the most of her position as an 
+            unsuspecting woman of the middle ages.</p>
+    </div>
+  </article>
+</section>
+    <footer>
+        Copyright My App 2019
+    </footer>
+
+</body>
+</html>
